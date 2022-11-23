@@ -1,52 +1,61 @@
+// Colors
+$white: #ffffff;
+$almost-white: #f2f2f2;
+$black: #111517;
+$box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+// Fonts
+$font-family: "Nunito Sans", sans-serif;
+$font-style: normal;
 
-  
-  // Colors
+// Fonts sizes
 
-  
-  // Fonts
-  
-  $font-normal: inter-normal;
-  $font-regular: inter-regular;
-  $font-bold: inter-bold;
-  $font-extra-bold: inter-extra-bold;
-  
-  // Fonts sizes
-  
-  $font-size-40: 40px;
-  $font-size-32: 32px;
-  $font-size-20: 20px;
-  $font-size-18: 18px;
-  $font-size-15: 15px;
-  $font-size-14: 14px;
-  
-  // Fonts weight
-  
-  $font-weight-800: 800;
-  $font-weight-700: 700;
-  $font-weight-400: 400;
-  
-  //Fonts height
-  
-  $line-height-40: 40px;
-  $line-height-32: 32px;
-  $line-height-26: 26px;
-  $line-height-24: 24px;
-  
-  // Letter spacing
-  
-  $letter-spacing: 4.375px;
-  
-  
-  @mixin for-size($size) {
-    @if $size == phone-only {
-      @media (max-width: 599px) { @content; }
-    } @else if $size == tablet-portrait-up {
-      @media (min-width: 600px) { @content; }
-    } @else if $size == tablet-landscape-up {
-      @media (min-width: 900px) { @content; }
-    } @else if $size == desktop-up {
-      @media (min-width: 1200px) { @content; }
-    } @else if $size == big-desktop-up {
-      @media (min-width: 1800px) { @content; }
+$font-size-40: 40px;
+$font-size-32: 32px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+$font-size-15: 15px;
+$font-size-14: 14px;
+$font-size-12: 14px;
+
+// Fonts weight
+
+$font-weight-800: 800;
+$font-weight-700: 700;
+$font-weight-600: 600;
+$font-weight-400: 400;
+
+//Fonts height
+
+$line-height-40: 40px;
+$line-height-32: 32px;
+$line-height-26: 26px;
+$line-height-24: 24px;
+$line-height-16: 16px;
+
+// Letter spacing
+
+$letter-spacing: 4.375px;
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
     }
   }
+}
