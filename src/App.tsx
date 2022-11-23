@@ -4,7 +4,7 @@ import { Controls, Header, Main } from "./sections";
 
 function App() {
   return (
-    <main className="App">
+    <main className="App" data-testid='application'>
       <Header />
       <Controls />
       <Main />
