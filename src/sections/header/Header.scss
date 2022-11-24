@@ -1,1 +1,44 @@
-@import '../../constants/index.scss';
+@import "../../constants/index.scss";
+
+.header-container {
+  background: $white;
+  box-shadow: $box-shadow;
+  padding: 30px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &.dark {
+    background: $dark-blue;
+    .header-title {
+      color: #ffffff;
+    }
+
+    .header-left {
+      .header-left-subtext {
+        color: $white;
+      }
+    }
+  }
+
+  .header-title {
+    font-weight: $font-weight-800;
+    font-size: $font-size-14;
+    line-height: $line-height-20;
+    color: $black;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-small;
+    cursor: pointer;
+
+    .header-left-subtext {
+      font-weight: $font-weight-600;
+      font-size: $font-size-12;
+      line-height: $line-height-16;
+      color: $black;
+    }
+  }
+}

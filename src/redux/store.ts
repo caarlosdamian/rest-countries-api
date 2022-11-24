@@ -1,11 +1,20 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import ThemeReducer from "./themeSlice/themeSlice";
 
+
+
+export const rootReducer = combineReducers({theme: ThemeReducer})
+// This would produce the following state object
+
 export const store = configureStore({
-  reducer: {
-    theme: ThemeReducer,
-  },
+  reducer: rootReducer,
 });
+
+export interface rootState {
+  theme:{
+    theme:boolean
+  }
+}
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
