@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppThunkDispatch, rootState } from "./redux/store";
-import { Controls, Header, Main } from "./sections";
 import { getAllCountries } from "./redux/api/api";
 import "./App.scss";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   const { theme } = useSelector((state: rootState) => state.theme);
@@ -17,9 +17,7 @@ function App() {
       className={`App ${(theme && "dark") || ""}`}
       data-testid="application"
     >
-      <Header />
-      <Controls />
-      <Main />
+      <Home />
     </main>
   );
 }

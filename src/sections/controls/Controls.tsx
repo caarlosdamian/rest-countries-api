@@ -1,8 +1,9 @@
 import React from 'react'
+import { TextInput } from '../../components/textInput/TextInput'
 import './Controls.scss'
 
 export const Controls = () => {
   return (
-    <div>Controls</div>
+    <div className='controls-container'><TextInput/></div>
   )
 }
