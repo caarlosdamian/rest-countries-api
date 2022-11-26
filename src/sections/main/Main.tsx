@@ -10,9 +10,9 @@ export const Main = () => {
   console.log();
   return (
     <div className="country-grid">
-      {data.map((county: Country) => (
+      {data.map((county: Country, index: number) => (
         <Card
-          key={county.name.official}
+          key={county.population * index + index}
           population={county.population}
           capital={county.capital}
           img={county.flags.svg}

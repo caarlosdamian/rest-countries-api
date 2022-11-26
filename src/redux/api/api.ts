@@ -18,7 +18,13 @@ export const getAllCountriesByContinent = createAsyncThunk(
 export const getAllCountriesByName = createAsyncThunk(
   "countries/all/Continent",
   async (name: string) => {
-    const response = await fetch(`https://restcountries.com/v2/name/${name}`);
-    return await response.json();
+    if (name === "") {
+      const response = await fetch("https://restcountries.com/v3.1/all");
+      return await response.json();
+    } else {
+      const response = await fetch(`https://restcountries.com/v2/name/${name}`);
+      console.log("abajo");
+      return await response.json();
+    }
   }
 );

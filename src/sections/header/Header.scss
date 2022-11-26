@@ -1,12 +1,12 @@
 @import "../../constants/index.scss";
 
 .header-container {
+  align-items: center;
   background: $white;
   box-shadow: $box-shadow;
-  padding: 30px 16px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding: 30px 16px;
   &.dark {
     background: $dark-blue;
     .header-title {
@@ -21,24 +21,24 @@
   }
 
   .header-title {
-    font-weight: $font-weight-800;
-    font-size: $font-size-14;
-    line-height: $line-height-20;
     color: $black;
+    font-size: $font-size-14;
+    font-weight: $font-weight-800;
+    line-height: $line-height-20;
   }
 
   .header-left {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: $spacing-small;
     cursor: pointer;
+    display: flex;
+    gap: $spacing-small;
+    justify-content: center;
 
     .header-left-subtext {
-      font-weight: $font-weight-600;
-      font-size: $font-size-12;
-      line-height: $line-height-16;
       color: $black;
+      font-size: $font-size-12;
+      font-weight: $font-weight-600;
+      line-height: $line-height-16;
     }
   }
 }

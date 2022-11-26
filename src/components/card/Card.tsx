@@ -24,9 +24,11 @@ export const Card = ({ capital, img, name, population, region }: CardI) => {
         </span>
         <span className="country-capital">
           <strong>Capital</strong>
-          {capital?.map((item) => (
-            <span>{item}</span>
-          ))}
+          {typeof capital === "object" ? (
+            capital?.map((item, i) => <span key={9 * i}>{item}</span>)
+          ) : (
+            <span>{capital}</span>
+          )}
         </span>
       </div>
     </div>

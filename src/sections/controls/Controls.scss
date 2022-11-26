@@ -1,11 +1,11 @@
 @import "../../constants/index.scss";
 
 .controls-container {
-  margin-top: 24px;
-  display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 40px;
+  display: flex;
   flex-direction: column;
-  padding: 16px;
+  gap: 40px;
+  justify-content: flex-start;
+  margin-top: $spacing-xnormal;
+  padding: $spacing-normal;
 }
