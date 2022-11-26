@@ -12,6 +12,11 @@
   position: relative;
   width: 200px;
 
+  &.dark{
+    background: #2B3844;
+    color: white;
+  }
+
   .option-container {
     align-items: flex-start;
     background: $white;

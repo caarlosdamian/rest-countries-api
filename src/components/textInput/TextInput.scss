@@ -1,21 +1,32 @@
 @import "../../constants/index.scss";
 
 .input-wrapper {
-  background: #ffffff;
+  background: $white;
   padding: 14px 32px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 26px;
   min-width: 343px;
+  &.dark {
+    background: $dark-blue;
+    color: $white;
+    .input-container {
+      background: $dark-blue;
+      color: $white;
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
   .input-container {
     border: none;
-    background: #ffffff;
+    background: $white;
     outline: none;
     &::placeholder {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 20px;
+      font-weight: $font-weight-400;
+      font-size: $font-size-12;
+      line-height: $line-height-20;
       color: #c4c4c4;
     }
   }

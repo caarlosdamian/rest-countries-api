@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { rootState } from "../../redux/store";
 import "./Card.scss";
 
 interface CardI {
@@ -9,8 +11,10 @@ interface CardI {
   capital: any[];
 }
 export const Card = ({ capital, img, name, population, region }: CardI) => {
+  const { theme } = useSelector((state: rootState) => state.theme);
+
   return (
-    <div className="card-container">
+    <div className={`card-container ${(theme && "dark") || ""}`}>
       <div className="img-container">
         <img src={img} alt="countryimg" />
       </div>
