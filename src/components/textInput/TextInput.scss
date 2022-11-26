@@ -7,9 +7,11 @@
   align-items: center;
   justify-content: flex-start;
   gap: 26px;
+  min-width: 343px;
   .input-container {
     border: none;
     background: #ffffff;
+    outline: none;
     &::placeholder {
       font-weight: 400;
       font-size: 12px;

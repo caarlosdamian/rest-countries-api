@@ -1,1 +1,38 @@
-@import '../../constants/index.scss';
+@import "../../constants/index.scss";
+
+.select-container {
+  padding: 14px 20px 14px 24px;
+  background: $white;
+  background: #ffffff;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+
+  .option-container {
+    position: absolute;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    min-width: 200px;
+    list-style: none;
+    bottom: -170px;
+    left: 0;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    li {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #111517;
+    }
+  }
+}
