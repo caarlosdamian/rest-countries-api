@@ -23,6 +23,10 @@ export interface rootState {
   theme: {
     theme: boolean;
   };
+  countries: {
+    status: string;
+    data: [];
+  };
 }
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

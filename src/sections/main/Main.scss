@@ -1,1 +1,10 @@
-@import '../../constants/index.scss';
+@import "../../constants/index.scss";
+
+.country-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(1, 264px);
+  gap: 40px;
+  margin-top: 32px;
+}
