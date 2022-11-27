@@ -12,6 +12,7 @@ export const Main = () => {
     <div className="country-grid">
       {data.map((county: Country, index: number) => (
         <Card
+          data={county}
           key={county.population * index + index}
           population={county.population}
           capital={county.capital}
