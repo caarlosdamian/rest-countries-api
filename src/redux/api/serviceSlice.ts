@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { asyncStatus } from "../../interfaces";
 import {
   getAllCountries,
+  getAllCountriesByCode,
   getAllCountriesByContinent,
   getAllCountriesByName,
 } from "./api";
@@ -44,6 +45,17 @@ export const ServiceSlice = createSlice({
       state.data = action.payload;
     },
     [getAllCountriesByName.rejected.type]: (state) => {
+      state.status = asyncStatus.error;
+    },
+    [getAllCountriesByCode.pending.type]: (state) => {
+      state.status = asyncStatus.peding;
+    },
+    [getAllCountriesByCode.fulfilled.type]: (state, action) => {
+      console.log(action.payload)
+      state.status = asyncStatus.success;
+      state.data = action.payload;
+    },
+    [getAllCountriesByCode.rejected.type]: (state) => {
       state.status = asyncStatus.error;
     },
   },
