@@ -45,6 +45,7 @@ export const ServiceSlice = createSlice({
     },
     [getAllCountriesByContinent.fulfilled.type]: (state, action) => {
       state.status = asyncStatus.success;
+      state.filteredData = action.payload;
       state.data = action.payload;
     },
     [getAllCountriesByContinent.rejected.type]: (state) => {
@@ -66,7 +67,7 @@ export const ServiceSlice = createSlice({
     [getAllCountriesByCode.fulfilled.type]: (state, action) => {
       let arrayName: any = [];
       action.payload.map((item: any) => {
-        arrayName.push(item[0]);
+       return  arrayName.push(item[0]);
       });
       state.status = asyncStatus.success;
       state.borderData = arrayName;

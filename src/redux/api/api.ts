@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Country } from "../../interfaces";
 
 export const getAllCountries = createAsyncThunk("countries/all", async () => {
   const response = await fetch("https://restcountries.com/v3.1/all");
@@ -17,7 +16,7 @@ export const getAllCountriesByContinent = createAsyncThunk(
 );
 
 export const getAllCountriesByName = createAsyncThunk(
-  "countries/all/Continent",
+  "countries/all/Name",
   async (name: string) => {
     if (name === "") {
       const response = await fetch("https://restcountries.com/v3.1/all");
