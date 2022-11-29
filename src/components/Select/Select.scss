@@ -11,9 +11,12 @@
   padding: 14px 20px 14px $spacing-xnormal;
   position: relative;
   width: 200px;
+  @include for-size(tablet-landscape-up) {
+    height: 56px;
+  }
 
-  &.dark{
-    background: #2B3844;
+  &.dark {
+    background: #2b3844;
     color: white;
   }
 
