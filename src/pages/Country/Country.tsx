@@ -65,9 +65,9 @@ export const Country = () => {
     </Link>
     <div className="details-container">
      <img className="country-flag" src={svg} alt="" />
-     <h1 className="country-namr">{""}</h1>
-
      <div className="main-details">
+      <h1 className="country-name">{nombre.common}</h1>
+
       <span>
        <strong>Native Name: </strong>
        {commonData.commonName}

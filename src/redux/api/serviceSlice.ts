@@ -11,12 +11,23 @@ const initialState = {
  status: "",
  data: [],
  borderData: [],
+ filteredData: [],
 };
 
 export const ServiceSlice = createSlice({
  name: "service",
  initialState,
- reducers: {},
+ reducers: {
+  getFilterData: (state, action) => {
+   if (action.payload === "") {
+    state.filteredData = state.data;
+   } else {
+    state.filteredData = state.data.filter((item: any) =>
+     item.name.toLowerCase().includes(action.payload.toLowerCase())
+    );
+   }
+  },
+ },
  extraReducers: {
   [getAllCountries.pending.type]: (state) => {
    state.status = asyncStatus.peding;
@@ -65,4 +76,6 @@ export const ServiceSlice = createSlice({
  },
 });
 
+
+// export default  {getFilterData} = ServiceSlice.actions
 export default ServiceSlice.reducer;

@@ -1,144 +1,184 @@
 @import "../../constants/index.scss";
 
 .country-container {
-  padding: 40px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  height: 100%;
+    padding: 40px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    height: 100%;
 
-  &.dark {
+
+    &.dark {
+        .back-button {
+            background: #2b3844;
+
+            span {
+                color: #ffffff;
+            }
+        }
+
+        .details-container {
+
+            .main-details,
+            .country-name,
+            .second-details {
+                color: #ffffff;
+            }
+
+            .bottom-controls {
+                background: #202c36;
+
+                .bottom-text {
+                    color: #ffffff;
+                }
+
+                .bottom-grid {
+                    .border-box {
+                        background: #2b3844;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
     .back-button {
-      background: #2B3844;
+        background: #ffffff;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+        border-radius: 2px;
+        border: none;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        max-width: 104px;
+        gap: 8px;
+        cursor: pointer;
 
-      span {
-        color: #FFFFFF;
-      }
+        span {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111517;
+        }
     }
 
     .details-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
 
-      .main-details,
-      .second-details {
-        color: #FFFFFF;
-      }
-
-      .bottom-controls {
-        background: #202c36;
-
-        .bottom-text {
-          color: #FFFFFF;
+        @include for-size(tablet-landscape-up) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
 
-        .bottom-grid {
+        .country-flag {
+            max-width: 320px;
+            min-width: 229px;
+            align-self: center;
 
-          .border-box {
-            background: #2B3844;
-            color: white;
-          }
+            @include for-size(tablet-landscape-up) {
+                max-width: 546px;
+                min-width: 401px;
+            }
         }
 
-      }
-    }
-  }
 
-  .back-button {
-    background: #ffffff;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
-    border-radius: 2px;
-    border: none;
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    max-width: 104px;
-    gap: 8px;
-    cursor: pointer;
 
-    span {
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 20px;
-      color: #111517;
-    }
-  }
+        .main-details {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 32px;
+            color: #111517;
 
-  .details-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
+            .country-name {
+                font-weight: 800;
+                font-size: 22px;
+                line-height: 30px;
 
-    .country-flag {
-      max-width: 320px;
-      min-width: 229px;
-      align-self: center;
-    }
+                @include for-size(tablet-landscape-up) {
+                    font-size: 32px;
+                    line-height: 44px;
+                }
+            }
 
-    .main-details {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 4px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 32px;
-      color: #111517;
-    }
+            @include for-size(tablet-landscape-up) {
+                grid-column: 3/4;
+                font-size: 16px;
+            }
 
-    .second-details {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 4px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 32px;
-      color: #111517;
-    }
-
-    .bottom-controls {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 16px;
-      flex-direction: column;
-
-      .bottom-text {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: #111517;
-      }
-
-      .bottom-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 60px;
-        max-width: 310px;
-
-        .border-box {
-          background: #FFFFFF;
-          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
-          border-radius: 2px;
-          min-width: 96px;
-          height: 28px;
-          font-weight: 300;
-          font-size: 12px;
-          line-height: 16px;
-          padding: 5px 10px;
-          color: #111517;
-          text-align: center;
-          overflow-y: scroll;
         }
-      }
-    }
-  }
 
+        .second-details {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 32px;
+            color: #111517;
+
+            @include for-size(tablet-landscape-up) {
+                margin-top: 44px;
+                font-size: 16px;
+                line-height: 32px;
+            }
+        }
+
+        .bottom-controls {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 16px;
+            flex-direction: column;
+
+            @include for-size(tablet-landscape-up) {
+                grid-row: 2/3;
+                grid-column: 3/5;
+            }
+
+            .bottom-text {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #111517;
+            }
+
+            .bottom-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 60px;
+                max-width: 310px;
+
+                .border-box {
+                    background: #ffffff;
+                    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+                    border-radius: 2px;
+                    min-width: 96px;
+                    height: 28px;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 16px;
+                    padding: 5px 10px;
+                    color: #111517;
+                    text-align: center;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
 }

@@ -9,7 +9,7 @@ export const TextInput = () => {
   const { theme } = useSelector((state: rootState) => state.theme);
   const dispatch = useDispatch<AppThunkDispatch>();
   const handleChange = (name: string) => {
-    dispatch(getAllCountriesByName(name));
+    // dispatch(getAllCountriesByName(name));
   };
   return (
     <div className={`input-wrapper ${(theme && "dark") || ""}`}>
