@@ -26,6 +26,7 @@ export interface rootState {
   countries: {
     status: string;
     data: [];
+    borderData: [];
   };
 }
 
