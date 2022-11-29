@@ -9,9 +9,21 @@ import "./App.scss";
 function App() {
   const { theme } = useSelector((state: rootState) => state.theme);
   const dispatch = useDispatch<AppThunkDispatch>();
+
+  const con = document.getElementsByTagName("body")[0];
+  console.log(con)
+
   useEffect(() => {
     dispatch(getAllCountries());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (theme) {
+      con.classList.add("dark");
+    } else {
+      con.classList.remove("dark");
+    }
+  }, [theme]);
 
   return (
     <main

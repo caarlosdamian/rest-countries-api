@@ -7,8 +7,13 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s linear;
+
   body {
     background: #f2f2f2;
+
+    &.dark {
+      background: #202c36;
+    }
   }
 
   a {
@@ -19,10 +24,8 @@
 .App {
   height: 100vh;
   background: #f2f2f2;
+
   &.dark {
     background: #202c36;
-    body {
-      background: #202c36;
-    }
   }
 }

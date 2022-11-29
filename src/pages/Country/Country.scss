@@ -5,7 +5,42 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
-  height: 100vh;
+  height: 100%;
+
+  &.dark {
+    .back-button {
+      background: #2B3844;
+
+      span {
+        color: #FFFFFF;
+      }
+    }
+
+    .details-container {
+
+      .main-details,
+      .second-details {
+        color: #FFFFFF;
+      }
+
+      .bottom-controls {
+        background: #202c36;
+
+        .bottom-text {
+          color: #FFFFFF;
+        }
+
+        .bottom-grid {
+
+          .border-box {
+            background: #2B3844;
+            color: white;
+          }
+        }
+
+      }
+    }
+  }
 
   .back-button {
     background: #ffffff;
@@ -63,9 +98,6 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 32px;
-      /* or 229% */
-
-
       color: #111517;
     }
 
@@ -108,8 +140,5 @@
       }
     }
   }
-
-
-
 
 }

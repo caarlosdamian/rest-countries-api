@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Header } from "../../sections";
 import { Link } from "react-router-dom";
 import Arrow from "../../assets/arrowLeft.svg";
+import ArrowWhite from "../../assets/arrowLeftWhite.svg";
 import { getAllCountriesByCode } from "../../redux/api/api";
 import { useDispatch, useSelector } from "react-redux";
 import { AppThunkDispatch, rootState } from "../../redux/store";
@@ -57,9 +58,9 @@ export const Country = () => {
  return (
   <div>
    <Header />
-   <div className="country-container">
+   <div className={`country-container ${(theme.theme && "dark") || ""}`}>
     <Link to={"/"} className="back-button">
-     <img src={Arrow} alt="ArrowLeft" />
+     <img src={theme.theme ? ArrowWhite : Arrow} alt="ArrowLeft" />
      <span>Back</span>
     </Link>
     <div className="details-container">
