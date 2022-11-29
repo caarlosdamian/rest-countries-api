@@ -11,7 +11,6 @@ function App() {
   const dispatch = useDispatch<AppThunkDispatch>();
 
   const con = document.getElementsByTagName("body")[0];
-  console.log(con)
 
   useEffect(() => {
     dispatch(getAllCountries());

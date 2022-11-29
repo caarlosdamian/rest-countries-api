@@ -27,6 +27,7 @@ export interface rootState {
     status: string;
     data: [];
     borderData: [];
+    filteredData: [];
   };
 }
 

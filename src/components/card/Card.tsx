@@ -22,7 +22,6 @@ export const Card = ({
   data,
 }: CardI) => {
   const { theme } = useSelector((state: rootState) => state.theme);
-console.log(name);
   return (
     <Link to={`/country/${name}`} state={data}>
       <div className={`card-container ${(theme && "dark") || ""}`}>

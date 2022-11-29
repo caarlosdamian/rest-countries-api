@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SearcIcon from "../../assets/search.svg";
 import { getAllCountriesByName } from "../../redux/api/api";
+import { getFilterData } from "../../redux/api/serviceSlice";
 import { AppThunkDispatch, rootState } from "../../redux/store";
 import "./TextInput.scss";
 
@@ -10,6 +11,7 @@ export const TextInput = () => {
   const dispatch = useDispatch<AppThunkDispatch>();
   const handleChange = (name: string) => {
     // dispatch(getAllCountriesByName(name));
+    dispatch(getFilterData(name))
   };
   return (
     <div className={`input-wrapper ${(theme && "dark") || ""}`}>
