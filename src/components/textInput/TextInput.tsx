@@ -1,7 +1,5 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SearcIcon from "../../assets/search.svg";
-import { getAllCountriesByName } from "../../redux/api/api";
 import { getFilterData } from "../../redux/api/serviceSlice";
 import { AppThunkDispatch, rootState } from "../../redux/store";
 import "./TextInput.scss";

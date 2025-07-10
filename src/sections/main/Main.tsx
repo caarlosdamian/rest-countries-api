@@ -11,8 +11,8 @@ export const Main = () => {
   );
   return (
     <div className="country-grid">
-      {filteredData.length !== 0 &&
-        filteredData.map((county: Country, index: number) => (
+      {filteredData?.length !== 0 &&
+        filteredData?.map((county: Country, index: number) => (
           <Card
             data={county}
             key={county.population * index + index}

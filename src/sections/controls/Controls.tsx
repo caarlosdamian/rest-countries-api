@@ -1,7 +1,7 @@
 import React from "react";
-import { Select } from "../../components/select/Select";
 import { TextInput } from "../../components/textInput/TextInput";
 import "./Controls.scss";
+import { Select } from "../../components/Select/Select";
 
 export const Controls = () => {
   return (

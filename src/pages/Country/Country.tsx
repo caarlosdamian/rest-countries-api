@@ -47,7 +47,7 @@ export const Country = () => {
     currency: currencies[keysCurrencies[0]].name,
    });
   }
- }, [nombre]);
+ }, [commonData, currencies, keysCurrencies, nombre]);
 
  useEffect(() => {
   if (borders?.length > 0) {

@@ -10,23 +10,23 @@ function App() {
   const { theme } = useSelector((state: rootState) => state.theme);
   const dispatch = useDispatch<AppThunkDispatch>();
 
-  const con = document.getElementsByTagName("body")[0];
+  // const con = document.getElementsByTagName("body")[0];
 
   useEffect(() => {
     dispatch(getAllCountries());
   }, [dispatch]);
 
-  useEffect(() => {
-    if (theme) {
-      con.classList.add("dark");
-    } else {
-      con.classList.remove("dark");
-    }
-  }, [theme]);
+  // useEffect(() => {
+  //   if (theme) {
+  //     con.classList.add("dark");
+  //   } else {
+  //     con.classList.remove("dark");
+  //   }
+  // }, [theme]);
 
   return (
     <main
-      className={`App ${(theme && "dark") || ""}`}
+      className={`App ${theme ? 'dark': ''}`}
       data-testid="application"
     >
       <RouterProvider router={router} />

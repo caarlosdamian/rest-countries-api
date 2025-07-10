@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <nav
       id="header"
-      className={`header-container ${theme && "dark" || ''}`}
+      className={`header-container ${theme ? "dark" : ''}`}
       data-testid="header-container"
     >
       <span className="header-title">Where in the world?</span>
